@@ -1,0 +1,78 @@
+.btn-contact {
+  width: 10vw;
+  height: 4vh;
+  border: 0 0 12px #fd36d4;
+  border-radius: 10px;
+  font-family: 'Jura', sans-serif;
+  font-size: 1vw;
+  background-color: transparent;
+}
+
+.btn-contact:hover, .btn-contact:hover a {
+  border-color: #09FFD8;
+  color: #09FFD8;
+  text-shadow: 0 0 12px #09FFD8;
+  transition: 0.2s ease-in-out !important;
+}
+
+#beh-btn, #gg-btn, #na-btn, #moss-btn, #pitch-btn {
+  width: 8vw;
+  height: 15vh;
+  border: none;
+  font-family: 'Jura', sans-serif;
+  font-size: 2vw;
+  color: #FFFBF8;
+  background-color: transparent;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+
+#beh-btn.active{
+  color: #fd36d4;
+  text-shadow: 0 0 12px #fd36d4;
+}
+
+#gg-btn.active{
+  color: #fd36d4;
+  text-shadow: 0 0 12px #fd36d4;
+}
+
+#na-btn.active{
+  color: #fd36d4;
+  text-shadow: 0 0 12px #fd36d4;
+}
+
+#moss-btn.active{
+  color: #fd36d4;
+  text-shadow: 0 0 12px #fd36d4;
+}
+
+#pitch-btn.active{
+  color: #fd36d4;
+  text-shadow: 0 0 12px #fd36d4;
+}
+
+button:hover {
+  color: #09FFD8;
+  text-shadow: 0 0 12px #09FFD8;
+  transition: 0.1s ease-in-out;
+}
+
+#site-btn:hover {
+  color: #09FFD8;
+  text-shadow: 0 0 12px #09FFD8;
+  transition: 0.1s ease-in-out;
+}
+
+#cv-btn {
+  color: #fd36d4;
+  text-shadow: 0 0 12px #fd36d4;
+  transition: 0.1s ease-in-out;
+}
+
+#cv-btn:hover {
+  color: #09FFD8;
+  text-shadow: 0 0 12px #09FFD8;
+  transition: 0.1s ease-in-out;
+}

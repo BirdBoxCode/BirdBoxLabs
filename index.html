@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "shortcut icon" type = "image/jpg" href = "https://res.cloudinary.com/depkh8amy/image/upload/v1680126141/BirdBox%20Code/BirdBox_dgn3ja.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap" rel="stylesheet">
+    <title>BirdBox Code</title>
+    <meta name="description" content= "BirdBox Code and Design">
+  </head>
+  <body>
+    <!-- Navbar -->
+      <section class="navbar">
+        <header>
+          <nav>
+            <ul>
+              <li class="navbar-left"><img class="bbc" src="https://res.cloudinary.com/depkh8amy/image/upload/v1680126141/BirdBox%20Code/BirdBox_dgn3ja.png"></li>
+              <li class="navbar-right"><button class="btn-contact"><a class="pink-link" href="mailto:chris@birdboxcode.dev">CONTACT</a></button></li>
+            </ul>
+          </nav>
+        </header>
+      </section>
+    <!-- Header -->
+      <section class="header">
+        <div class="header-container">
+            <h1>BIRDBOX CODE</h1>
+        </div>
+      </section>
+    <!-- Main Section -->
+    <div class="desktop">
+      <section class="main">
+        <div class="about-section">
+          <div class="about-wrapper">
+            <div class="about-header">
+              <h2>ABOUT ME</h2>
+              <p>I'm Chris McCarthy.</p><br>
+              <p>A creative professional passionate about crafting precise and visually compelling designs that elevate brands, individuals, and events in the digital space.<br><br> With a sharp eye for detail and a natural affinity for software technologies, I combine expertise in graphic design, web development, and sound design to deliver engaging, user-focused digital experiences.<br><br> My journey has been shaped by community collaboration, contributing to cultural and creative projects alongside diverse collectives. Currently, I lead two companies: Beat Em Hub, a gaming events organizer, and NerdAdvisor, a career development platform, while playing a key role in organizing Games Ground, Berlin’s leading gaming festival.<br><br>
+                I thrive in both team-oriented and independent roles, balancing a friendly, people-first mindset with the initiative to achieve meaningful results. Driven by a passion for innovation and collaboration, I aim to create solutions that not only meet needs but leave a lasting impression.<br>
+              <h2>WHAT CAN I DO IN TERMS OF WEB DEV?</h2>
+              <p style="margin-bottom: 1em;">Find more details right here on my CV</p>
+              <button class="btn-contact"><a id="cv-btn" href="https://drive.google.com/file/d/156I20RgYZEw9alS3pNiKOiW7s1efudjl/view?usp=sharing" target="_blank">CV</a></button>
+              <p><br><br><br><br><br><br><br><br><br><br><br></p>
+            </div>
+          </div>
+        </div>
+        <div class="projects-section">
+          <div class="projects-header">
+            <h2>CURRENT PROJECTS</h2>
+          </div>
+            <div class="separator">
+              <span class="line-bot"></span>
+            </div>
+            <button id="na-btn" class="active" onclick="toggleButtonColor(this); setSiteLink('http://www.nerdadvisor.org/')">NERDADVISOR</button>
+            <div class="separator">
+              <span class="line-bot"></span>
+            </div>
+            <button id="gg-btn" onclick="toggleButtonColor(this); setSiteLink('https://gamesground.de/')">GAMES GROUND</button>
+            <div class="separator">
+              <span class="line-bot"></span>
+            </div>
+            <button id="beh-btn" onclick="toggleButtonColor(this); setSiteLink('https://beatemhub.com/')">BEAT EM HUB</button>
+            <div class="separator">
+              <span class="line-bot"></span>
+            </div>
+            <button id="moss-btn" onclick="toggleButtonColor(this); setSiteLink('https://www.mossradio.live/users/sign_in')">MOSS RADIO</button>
+            <div class="separator">
+              <span class="line-bot"></span>
+            </div>
+            <button id="pitch-btn" onclick="toggleButtonColor(this); setSiteLink('https://drive.google.com/file/d/1vX6L3WkvlFNAVc9XMu0XEv1lNnEQ-JiC/view?usp=sharing')">OTHER DESIGN</button>
+            <div class="separator">
+              <span class="line-bot"></span>
+            </div>
+            <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+        </div>
+        <div class="preview-section">
+          <div class="preview-header">
+            <h2>PROJECT PREVIEW</h2>
+            <button class="btn-contact"><a id="site-btn" href="" target="_blank">VIEW SITE</a></button>
+          </div>
+          <div id="na-section">
+            <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1749074249/BirdBox%20Code/NerdAdvisor_New_Blue_-_HOME_k4owb5.png">
+            <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1749074431/BirdBox%20Code/NerdAdvisor_New_Blue-_CHALLENGE_SHOW_ovntqh.png">
+          </div>
+          <div id="gg-section" style="display:none;">
+            <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1749074643/BirdBox%20Code/Screenshot_2025-06-05_at_00.01.53_vehrbv.png">
+            <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1749074641/BirdBox%20Code/Screenshot_2025-06-05_at_00.03.23_jeb8gz.png">
+            <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1749074641/BirdBox%20Code/Screenshot_2025-06-05_at_00.03.42_w1oufc.png">
+          </div>
+          <div id="beh-section" style="display:none;">
+            <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1749074914/BirdBox%20Code/Screenshot_2025-06-05_at_00.07.00_ynlyyy.png">
+            <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1749074906/BirdBox%20Code/Screenshot_2025-06-05_at_00.07.35_qqkkma.png">
+            <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1749074908/BirdBox%20Code/Screenshot_2025-06-05_at_00.08.04_u0qv43.png">
+          </div>
+          <div id="moss-section" style="display:none;">
+            <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1680017128/BirdBox%20Code/moss-1_qkkyna.png">
+            <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1680017128/BirdBox%20Code/moss-2_myse5d.png">
+            <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1680017128/BirdBox%20Code/moss-3_dic6yy.png">
+            <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1680017128/BirdBox%20Code/moss-4_orkmym.png">
+          </div>
+          <div id="pitch-section" style="display:none;">
+            <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1681731701/BirdBox%20Code/Cinnovate_czff3f.png">
+            <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1680017696/BirdBox%20Code/pitch-1_x5d1li.png">
+            <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1680017697/BirdBox%20Code/pitch-2_loawkp.png">
+            <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1680017697/BirdBox%20Code/pitch-3_thwuka.png">
+            <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1680017697/BirdBox%20Code/pitch-4_gd3qqk.png">
+          </div>
+          <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+        </div>
+      </section>
+    </div>
+
+
+  <!-- MOBILE DISPLAY -->
+    <div class="mob">
+      <section class="mob-main">
+        <div class="mob-projects-section">
+            <h2>CURRENT PROJECTS</h2>
+            <p style="margin-bottom:0.5em">Tap To View</p>
+            <div class="separator">
+              <span class="line-bot"></span>
+            </div>
+            <button id="mob-na-btn" class="active" onclick="toggleButtonColor(this); toggleSection('mob-na-section')">NERDADVISOR</button>
+            <div id="mob-na-section" style="display: none">
+            <div class="mob-preview-header">
+              <button class="mob-view-btn"><a id="site-btn" href="http://www.nerdadvisor.org/" target="_blank">VIEW SITE</a></button>
+            </div>
+              <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1749074249/BirdBox%20Code/NerdAdvisor_New_Blue_-_HOME_k4owb5.png">
+              <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1749074431/BirdBox%20Code/NerdAdvisor_New_Blue-_CHALLENGE_SHOW_ovntqh.png">
+            </div>
+            <div class="separator">
+              <span class="line-bot"></span>
+            </div>
+            <button id="mob-gg-btn" onclick="toggleButtonColor(this); toggleSection('mob-gg-section')">GAMES GROUND</button>
+            <div id="mob-gg-section" style="display: none">
+            <div class="mob-preview-header">
+              <button class="mob-view-btn"><a id="site-btn" href="http://www.gamesground.de/" target="_blank">VIEW SITE</a></button>
+            </div>
+              <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1749074643/BirdBox%20Code/Screenshot_2025-06-05_at_00.01.53_vehrbv.png">
+              <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1749074641/BirdBox%20Code/Screenshot_2025-06-05_at_00.03.23_jeb8gz.png">
+              <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1749074641/BirdBox%20Code/Screenshot_2025-06-05_at_00.03.42_w1oufc.png">
+            </div>
+            <div class="separator">
+              <span class="line-bot"></span>
+            </div>
+            <button id="mob-beh-btn" onclick="toggleButtonColor(this); toggleSection('mob-beh-section')">BEAT EM HUB</button>
+            <div id="mob-beh-section" style="display: none">
+              <div class="mob-preview-header">
+                <button class="mob-view-btn"><a id="site-btn" href="https://beatemhub.com/" target="_blank">VIEW SITE</a></button></h2>
+              </div>
+                <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1749074914/BirdBox%20Code/Screenshot_2025-06-05_at_00.07.00_ynlyyy.png">
+                <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1749074906/BirdBox%20Code/Screenshot_2025-06-05_at_00.07.35_qqkkma.png">
+                <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1749074908/BirdBox%20Code/Screenshot_2025-06-05_at_00.08.04_u0qv43.png">
+            </div>
+            <div class="separator">
+              <span class="line-bot"></span>
+            </div>
+            <button id="mob-moss-btn" onclick="toggleButtonColor(this); toggleSection('mob-moss-section')">MOSS RADIO</button>
+            <div id="mob-moss-section" style="display: none">
+              <div class="mob-preview-header">
+                <button class="mob-view-btn"><a id="site-btn" href="https://www.mossradio.live/users/sign_in/" target="_blank">VIEW SITE</a></button>
+              </div>
+                <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1680017128/BirdBox%20Code/moss-1_qkkyna.png">
+                <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1680017128/BirdBox%20Code/moss-2_myse5d.png">
+                <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1680017128/BirdBox%20Code/moss-3_dic6yy.png">
+                <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1680017128/BirdBox%20Code/moss-4_orkmym.png">
+            </div>
+            <div class="separator">
+              <span class="line-bot"></span>
+            </div>
+            <button id="mob-pitch-btn" onclick="toggleButtonColor(this); toggleSection('mob-pitch-section')">PITCH DECK</button>
+            <div id="mob-pitch-section" style="display: none">
+              <div class="mob-preview-header">
+                <button class="mob-view-btn"><a id="site-btn" href="https://drive.google.com/file/d/1vX6L3WkvlFNAVc9XMu0XEv1lNnEQ-JiC/view?usp=sharing/" target="_blank">VIEW SITE</a></button>
+              </div>
+                <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1681731701/BirdBox%20Code/Cinnovate_czff3f.png">
+                <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1680017696/BirdBox%20Code/pitch-1_x5d1li.png">
+                <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1680017697/BirdBox%20Code/pitch-2_loawkp.png">
+                <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1680017697/BirdBox%20Code/pitch-3_thwuka.png">
+                <img class="img-wrapper" src="https://res.cloudinary.com/depkh8amy/image/upload/v1680017697/BirdBox%20Code/pitch-4_gd3qqk.png">
+            </div>
+            <div class="separator">
+              <span class="line-bot"></span>
+            </div>
+        </div>
+        <div class="mob-about-section">
+          <div class="mob-about-header">
+            <h2>ABOUT ME</h2>
+            <p>I'm Chris McCarthy.</p><br>
+            <p>A creative professional passionate about crafting precise and visually compelling designs that elevate brands, individuals, and events in the digital space.<br><br> With a sharp eye for detail and a natural affinity for software technologies, I combine expertise in graphic design, web development, and sound design to deliver engaging, user-focused digital experiences.<br><br> My journey has been shaped by community collaboration, contributing to cultural and creative projects alongside diverse collectives. Currently, I lead two companies: Beat Em Hub, a gaming events organizer, and NerdAdvisor, a career development platform, while playing a key role in organizing Games Ground, Berlin’s leading gaming festival.<br><br>
+              I thrive in both team-oriented and independent roles, balancing a friendly, people-first mindset with the initiative to achieve meaningful results. Driven by a passion for innovation and collaboration, I aim to create solutions that not only meet needs but leave a lasting impression.<br>
+            <h2>WHAT CAN I DO IN TERMS OF WEB DEV?</h2>
+            <p style="margin-bottom: 1em;">Find more details right here on my CV</p>
+            <button class="btn-contact"><a id="cv-btn" href="https://drive.google.com/file/d/156I20RgYZEw9alS3pNiKOiW7s1efudjl/view?usp=sharing" target="_blank">CV</a></button>
+          </div>
+          <br><br><br><br>
+        </div>
+      </section>
+    </div>
+      <footer>
+        <div class="foot-wrap">
+          <div class="flex-links">
+            <div class="link-wrapper">
+              <p3 id="link-1"><a href="https://github.com/BirdBoxCode" target="_blank">GitHub</a></p>
+            </div>
+            <div class="link-wrapper">
+              <p3 id="link-2"><a href="https://www.linkedin.com/in/christopher-mccarthy/" target="_blank">LinkedIn</a></p>
+            </div>
+            <div class="link-wrapper">
+              <p3 id="link-3"><a href="https://linktr.ee/beatemhub" target="_blank">LinkTree</a></p>
+            </div>
+            <div class="link-wrapper" style="border: none">
+              <p3 id="link-5"><a href="https://vimeo.com/user187343242" target="_blank">Vimeo</a></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <canvas id="static-noise"></canvas>
+    <script src="script.js"></script>
+  </body>
+</html>
