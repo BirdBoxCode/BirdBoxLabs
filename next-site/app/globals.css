@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --font-jura: var(--font-jura), sans-serif;
+
+  --color-background: #0d0e11;
+  --color-foreground: #fffbf8;
+  --color-accent-pink: #fd36d4;
+  --color-accent-cyan: #09ffd8;
+  --color-text-secondary: #d9d9d9;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-jura);
+}
+
+/* Custom Utilities for shadows from style.css */
+@utility text-glow-white {
+  text-shadow: 0 0 12px #fffbf8;
+}
+
+@utility text-glow-gray {
+  text-shadow: 0 0 12px #d9d9d937;
+}
+
+@utility text-glow-pink {
+  text-shadow: 0 0 12px #fd36d4;
+}
+
+@utility text-glow-cyan {
+  text-shadow: 0 0 12px #09ffd8;
+}
+
+/* Base styles ported from style.css */
+h1 {
+  font-family: var(--font-jura);
+  font-size: 11.7vw;
+  text-align: center;
+  color: var(--color-foreground);
+  text-shadow: 0 0 12px #fffbf8;
+  letter-spacing: 0.62vw;
+}
+
+h2 {
+  font-family: var(--font-jura);
+  font-size: 1vw;
+  color: var(--color-text-secondary);
+  text-shadow: 0 0 12px #d9d9d937;
+  margin: 1em 0em;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 10vw;
+  }
+  h2 {
+    font-size: 5vw;
+    text-align: center;
+  }
+}
+
+/* Hide scrollbar for clean internal scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
