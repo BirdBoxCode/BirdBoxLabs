@@ -40,7 +40,7 @@ export default function AboutSection() {
                     <h2 className="font-jura text-[1vw] text-[#d9d9d9] text-glow-gray my-4">WHAT CAN I DO IN TERMS OF WEB DEV?</h2>
                     <p className="font-jura font-light text-[#FFFBF8] text-[1vw] mb-[1em]">Find more details right here on my CV</p>
                     <button className="btn-contact w-[10vw] h-[5vh] bg-transparent border-none cursor-pointer">
-                        <a id="cv-btn" href="https://drive.google.com/file/d/156I20RgYZEw9alS3pNiKOiW7s1efudjl/view?usp=sharing" target="_blank" className="text-[#fd36d4] text-glow-pink hover:text-[#09FFD8] hover:text-shadow-[0_0_12px_#09FFD8] transition-all duration-200 text-[1vw]">CV</a>
+                        <a id="cv-btn" href="https://drive.google.com/file/d/1QWTjVdoovBST_zC-85nUxjKhQ3FDrFji/view?usp=sharing" target="_blank" className="text-[#fd36d4] text-glow-pink hover:text-[#09FFD8] hover:text-shadow-[0_0_12px_#09FFD8] transition-all duration-200 text-[1vw]">CV</a>
                     </button>
                     <p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
                 </div>
