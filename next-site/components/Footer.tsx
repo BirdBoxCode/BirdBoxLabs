@@ -32,7 +32,7 @@ export default function Footer() {
           </div>
           <div className="link-wrapper border-r border-[#9D9D9D] w-full h-[90%] text-center">
              <p className="my-1 mx-auto text-[#FFFBF8] font-light text-[1vw] md:mr-12">
-              <a href="https://linktr.ee/beatemhub" target="_blank" className="hover:text-[#fd36d4] hover:shadow-[0_0_12px_#fd36d4] transition-all duration-100 text-[2.8vw] md:text-[0.8vw]">LinkTree</a>
+              <a href="https://www.behance.net/birdboxcode" target="_blank" className="hover:text-[#fd36d4] hover:shadow-[0_0_12px_#fd36d4] transition-all duration-100 text-[2.8vw] md:text-[0.8vw]">Behance</a>
             </p>
           </div>
           <div className="link-wrapper border-none w-full h-[90%] text-center">
