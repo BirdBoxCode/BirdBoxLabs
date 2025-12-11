@@ -12,6 +12,18 @@ type Project = {
 
 const projects: Project[] = [
     {
+    id: "gamesground",
+    name: "GAMES GROUND",
+    url: "https://gamesground.de/",
+    images: [
+            "https://res.cloudinary.com/depkh8amy/image/upload/v1765446872/BirdBox%20Code/Games%20Ground/Games_Ground_jiaxke.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765446874/BirdBox%20Code/Games%20Ground/Games_Ground_2_gterqn.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1749074643/BirdBox%20Code/Screenshot_2025-06-05_at_00.01.53_vehrbv.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1749074641/BirdBox%20Code/Games%20Ground/Screenshot_2025-06-05_at_00.03.42_w1oufc.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1749074641/BirdBox%20Code/Games%20Ground/Screenshot_2025-06-05_at_00.03.23_jeb8gz.png",
+    ],
+  },
+    {
     id: "noheto",
     name: "NOHETO!",
     url: "http://www.noheto.de/",
@@ -21,44 +33,46 @@ const projects: Project[] = [
       "https://res.cloudinary.com/depkh8amy/image/upload/v1765404372/BirdBox%20Code/NOHETO%21/Noheto3_tncwdd.png",
     ],
   },
-  {
+    {
     id: "nerdadvisor",
     name: "NERDADVISOR",
-    url: "http://www.nerdadvisor.org/",
+    url: "https://www.figma.com/design/Jxipdu1kwiuZNPZGGXIkys/NerdAdvisor?node-id=1932-568&t=wUn9a32zc66mKfo9-1",
     images: [
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1749074249/BirdBox%20Code/NerdAdvisor_New_Blue_-_HOME_k4owb5.png",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1749074431/BirdBox%20Code/NerdAdvisor_New_Blue-_CHALLENGE_SHOW_ovntqh.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765446706/BirdBox%20Code/NerdAdvisor/NA1_fvj5rz.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765446708/BirdBox%20Code/NerdAdvisor/NA2_k4j056.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765446706/BirdBox%20Code/NerdAdvisor/NA3_mbb4zb.png",
     ],
   },
   {
-    id: "gamesground",
-    name: "GAMES GROUND",
-    url: "https://gamesground.de/",
+    id: "vriendjes",
+    name: "VRIENDJES",
+    url: "http://www.vriendjes.nl",
     images: [
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1749074643/BirdBox%20Code/Screenshot_2025-06-05_at_00.01.53_vehrbv.png",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1749074641/BirdBox%20Code/Screenshot_2025-06-05_at_00.03.23_jeb8gz.png",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1749074641/BirdBox%20Code/Screenshot_2025-06-05_at_00.03.42_w1oufc.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765446535/BirdBox%20Code/Vriendjes/Vriendjes_pn7j8w.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765446534/BirdBox%20Code/Vriendjes/Vriendjes2_ljy6xm.png",
     ],
   },
+
   {
     id: "beatemhub",
-    name: "BEAT EM HUB",
+    name: "BEAT EMM HUB",
     url: "https://beatemhub.com/",
     images: [
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765447077/BirdBox%20Code/Beat%20em%20Hub/BEH_ifnoj0.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765447079/BirdBox%20Code/Beat%20em%20Hub/BEH2_jblb7s.png",
       "https://res.cloudinary.com/depkh8amy/image/upload/v1749074914/BirdBox%20Code/Screenshot_2025-06-05_at_00.07.00_ynlyyy.png",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1749074906/BirdBox%20Code/Screenshot_2025-06-05_at_00.07.35_qqkkma.png",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1749074908/BirdBox%20Code/Screenshot_2025-06-05_at_00.08.04_u0qv43.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1749074908/BirdBox%20Code/Beat%20em%20Hub/Screenshot_2025-06-05_at_00.08.04_u0qv43.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1749074906/BirdBox%20Code/Beat%20em%20Hub/Screenshot_2025-06-05_at_00.07.35_qqkkma.png",
     ],
   },
   {
-    id: "mossradio",
-    name: "MOSS RADIO",
-    url: "https://www.mossradio.live/users/sign_in",
+    id: "donna",
+    name: "DONNA AVILES",
+    url: "https://donna-aviles.com/",
     images: [
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1680017128/BirdBox%20Code/moss-1_qkkyna.png",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1680017128/BirdBox%20Code/moss-2_myse5d.png",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1680017128/BirdBox%20Code/moss-3_dic6yy.png",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1680017128/BirdBox%20Code/moss-4_orkmym.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765447501/BirdBox%20Code/Donna/Donna1_e0ngkq.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765447499/BirdBox%20Code/Donna/Donna2_aslhcj.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1749074914/BirdBox%20Code/Screenshot_2025-06-05_at_00.07.00_ynlyyy.png",
     ],
   },
   {
