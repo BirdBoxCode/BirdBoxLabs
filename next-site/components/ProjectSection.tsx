@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-
+import { motion, AnimatePresence } from "framer-motion";
 
 type ProjectCategory = "web" | "pitch";
 
@@ -212,49 +212,60 @@ export default function ProjectSection() {
              <h2 className="font-jura text-[1vw] text-[#d9d9d9] text-glow-gray my-4">CURRENT PROJECTS</h2>
              
              {/* Desktop Category Toggle */}
-             <div className="flex bg-[#2a2a2a] rounded-full p-1 border border-[#9D9D9D]">
-                <button
-                  onClick={() => handleCategoryChange("web")}
-                  className={`px-3 py-1 rounded-full font-jura text-[0.8vw] transition-all duration-200 ${
-                    activeCategory === "web" 
-                      ? "bg-[#fd36d4] text-[#0D0E11]" 
-                      : "text-[#d9d9d9] hover:text-[#fd36d4]"
-                  }`}
-                >
-                  Websites
-                </button>
-                <button
-                  onClick={() => handleCategoryChange("pitch")}
-                  className={`px-3 py-1 rounded-full font-jura text-[0.8vw] transition-all duration-200 ${
-                    activeCategory === "pitch" 
-                      ? "bg-[#fd36d4] text-[#0D0E11]" 
-                      : "text-[#d9d9d9] hover:text-[#fd36d4]"
-                  }`}
-                >
-                  Pitch decks
-                </button>
+             <div className="flex bg-[#2a2a2a] rounded-full p-1 border border-[#9D9D9D] relative">
+               {["web", "pitch"].map((cat) => (
+                 <button
+                   key={cat}
+                   onClick={() => handleCategoryChange(cat as ProjectCategory)}
+                   className={`relative px-3 py-1 rounded-full font-jura text-[0.8vw] transition-colors duration-200 z-10 ${
+                     activeCategory === cat ? "text-[#0D0E11]" : "text-[#d9d9d9] hover:text-[#fd36d4]"
+                   }`}
+                 >
+                   {cat === "web" ? "Websites" : "Pitch decks"}
+                   {activeCategory === cat && (
+                     <motion.div
+                       layoutId="active-pill-desktop"
+                       className="absolute inset-0 bg-[#fd36d4] rounded-full -z-10"
+                       transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                     />
+                   )}
+                 </button>
+               ))}
              </div>
           </div>
           
-          {filteredProjects.map((proj, idx) => (
-             <div key={proj.id} className="flex flex-col w-full">
-                <div className="separator w-full flex items-center border-t border-[#9D9D9D] my-2"></div>
-                <button 
-                  onClick={() => setActiveProject(proj.id)}
-                  className={`w-full text-left py-2 px-0 bg-transparent border-none cursor-pointer font-jura text-[1vw] transition-colors duration-100
-                    ${activeProject === proj.id 
-                       ? "text-[#fd36d4] text-glow-pink" 
-                       : "text-[#d9d9d9] hover:text-[#fd36d4] hover:text-glow-pink"
-                    }`}
-                >
-                  {proj.name}
-                </button>
-                {/* Add spacer at the end if it's the last item to match original layout breathing room */}
-                {idx === filteredProjects.length - 1 && (
-                     <p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
-                )}
-             </div>
-          ))}
+          <div className="flex flex-col w-full">
+           <AnimatePresence mode="wait">
+            {filteredProjects.map((proj, idx) => (
+              <motion.div
+                key={proj.id}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -10 }}
+                transition={{ duration: 0.2, delay: idx * 0.05 }}
+                className="w-full"
+              >
+                  <div className="separator w-full flex items-center border-t border-[#9D9D9D] my-2"></div>
+                  <motion.button 
+                    onClick={() => setActiveProject(proj.id)}
+                    whileHover={{ x: 10 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                    className={`w-full text-left py-2 px-0 bg-transparent border-none cursor-pointer font-jura text-[1vw] transition-colors duration-200
+                      ${activeProject === proj.id 
+                        ? "text-[#fd36d4] text-glow-pink" 
+                        : "text-[#d9d9d9] hover:text-[#fd36d4] hover:text-glow-pink"
+                      }`}
+                  >
+                    {proj.name}
+                  </motion.button>
+                  {/* Add spacer at the end if it's the last item to match original layout breathing room */}
+                  {idx === filteredProjects.length - 1 && (
+                      <p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
+                  )}
+              </motion.div>
+            ))}
+           </AnimatePresence>
+          </div>
         </div>
 
         {/* Preview Column */}
@@ -266,7 +277,7 @@ export default function ProjectSection() {
                  <a 
                    href={currentProjectData.url} 
                    target="_blank" 
-                   className="text-[#fd36d4] text-glow-pink text-[1vw] no-underline hover:text-[#09FFD8] hover:text-shadow-[0_0_12px_#09FFD8] transition-all duration-100"
+                   className="text-[#fd36d4] text-glow-pink text-[1vw] no-underline hover:text-[#09FFD8] hover:text-glow-cyan transition-all duration-300"
                  >
                    VIEW SITE
                  </a>
@@ -295,27 +306,25 @@ export default function ProjectSection() {
          
          {/* Mobile Category Toggle */}
          <div className="flex justify-center mb-4">
-            <div className="flex bg-[#2a2a2a] rounded-full p-1 border border-[#9D9D9D]">
-              <button
-                onClick={() => handleCategoryChange("web")}
-                className={`px-6 py-2 rounded-full font-jura text-[4vw] transition-all duration-200 ${
-                  activeCategory === "web" 
-                    ? "bg-[#fd36d4] text-[#0D0E11]" 
-                    : "text-[#d9d9d9]"
-                }`}
-              >
-                Websites
-              </button>
-              <button
-                onClick={() => handleCategoryChange("pitch")}
-                className={`px-6 py-2 rounded-full font-jura text-[4vw] transition-all duration-200 ${
-                  activeCategory === "pitch" 
-                    ? "bg-[#fd36d4] text-[#0D0E11]" 
-                    : "text-[#d9d9d9]"
-                }`}
-              >
-                Pitch decks
-              </button>
+            <div className="flex bg-[#2a2a2a] rounded-full p-1 border border-[#9D9D9D] relative">
+              {["web", "pitch"].map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => handleCategoryChange(cat as ProjectCategory)}
+                  className={`relative px-6 py-2 rounded-full font-jura text-[4vw] transition-colors duration-200 z-10 ${
+                    activeCategory === cat ? "text-[#0D0E11]" : "text-[#d9d9d9]"
+                  }`}
+                >
+                  {cat === "web" ? "Websites" : "Pitch decks"}
+                  {activeCategory === cat && (
+                    <motion.div
+                      layoutId="active-pill-mobile"
+                      className="absolute inset-0 bg-[#fd36d4] rounded-full -z-10"
+                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    />
+                  )}
+                </button>
+              ))}
             </div>
          </div>
 

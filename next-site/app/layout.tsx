@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Jura } from "next/font/google";
 import "./globals.css";
+import CursorFollower from "@/components/CursorFollower";
 
 const jura = Jura({
   variable: "--font-jura",
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body
         className={`${jura.variable} antialiased bg-[#0D0E11] text-[#FFFBF8] overflow-x-hidden`}
       >
+        <CursorFollower />
         {children}
       </body>
     </html>

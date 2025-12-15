@@ -19,7 +19,7 @@ export default function Navbar() {
             <li className="navbar-right">
               <button className="btn-contact w-[20vw] h-[4vh] md:w-[10vw] md:h-[5vh] bg-transparent border-none cursor-pointer">
                 <a
-                  className="pink-link text-[3vw] md:text-[1vw] text-[#fd36d4] text-glow-pink no-underline hover:text-glow-pink transition-all duration-100"
+                  className="pink-link text-[3vw] md:text-[1vw] text-[#fd36d4] text-glow-pink no-underline hover:text-[#09FFD8] hover:text-glow-cyan transition-all duration-300"
                   href="mailto:chris@birdboxcode.dev"
                 >
                   CONTACT
