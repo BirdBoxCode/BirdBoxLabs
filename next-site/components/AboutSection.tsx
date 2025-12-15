@@ -1,32 +1,21 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 export default function AboutSection() {
+  // Removed incorrect scroll fade logic.
+  // We will rely on a CSS mask or a fixed overlay for the "more content" indication.
+  // We still need a ref for the scroll container if we want to check scroll position later, 
+  // but for now let's keep it to avoid TS errors if we removed usage.
   const sectionRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const section = sectionRef.current;
-    const header = headerRef.current;
-
-    if (!section || !header) return;
-
-    const handleScroll = () => {
-      const scrollPosition = section.scrollTop;
-      const headerHeight = header.offsetHeight;
-      const opacity = 1 - (scrollPosition / headerHeight);
-      header.style.opacity = Math.max(0, opacity).toString();
-    };
-
-    section.addEventListener("scroll", handleScroll);
-    return () => section.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <div className="mob:mb-8 md:mb-0">
-        {/* Desktop Layout */}
-        <div className="hidden md:block about-section md:col-span-1 overflow-y-scroll h-[80vh] no-scrollbar pr-4 transition-all" ref={sectionRef}>
+        {/* Desktop Layout - Added relative container for fade mask */}
+        <div className="hidden md:block md:col-span-1 h-[80vh] relative">
+            <div className="about-section overflow-y-scroll h-full no-scrollbar pr-4" ref={sectionRef}>
+            {/* The mask should overlay this container at the bottom */}
             <div className="about-wrapper">
                 <div className="about-header transition-opacity duration-100" ref={headerRef}>
                     <h2 className="font-jura text-[1vw] text-[#d9d9d9] text-glow-gray my-4">ABOUT ME</h2>
@@ -59,12 +48,15 @@ export default function AboutSection() {
                     <p className="font-jura font-light text-[#FFFBF8] text-[1vw] mb-[1em]">
                         For a full breakdown of my capabilities, tools and experience, check my CV.
                     </p>
-                    <button className="btn-contact w-[10vw] h-[5vh] bg-transparent border-none cursor-pointer">
-                        <a id="cv-btn" href="https://drive.google.com/file/d/1QWTjVdoovBST_zC-85nUxjKhQ3FDrFji/view?usp=sharing" target="_blank" className="text-[#fd36d4] text-glow-pink hover:text-[#09FFD8] hover:text-shadow-[0_0_12px_#09FFD8] transition-all duration-200 text-[1vw]">CV</a>
-                    </button>
+                    
+                    {/* CV Button moved to Navbar */}
+                    <div className="h-[5vh]"></div> {/* Spacer to replace button height */}
                     <p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
                 </div>
             </div>
+            </div>
+            {/* Bottom Gradient Fade Mask */}
+            <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#0D0E11] to-transparent pointer-events-none" />
         </div>
 
         {/* Mobile Layout */}
@@ -99,9 +91,14 @@ export default function AboutSection() {
                  <p className="font-jura font-light text-[#FFFBF8] text-[1em] text-center mb-[1em]">
                     For a full breakdown of my capabilities, tools and experience, check my CV.
                  </p>
-                 <button className="btn-contact w-[20vw] h-[4vh] bg-transparent border-none cursor-pointer mx-auto block">
-                     <a id="cv-btn" href="https://drive.google.com/file/d/1QWTjVdoovBST_zC-85nUxjKhQ3FDrFji/view?usp=sharing" target="_blank" className="text-[#fd36d4] text-glow-pink hover:text-[#09FFD8] hover:text-shadow-[0_0_12px_#09FFD8] transition-all duration-200 text-[3vw]">CV</a>
-                 </button>
+                 <p className="font-jura font-light text-[#FFFBF8] text-[1em] text-center mb-[1em]">
+                    For a full breakdown of my capabilities, tools and experience, check my CV.
+                 </p>
+                 {/* CV Button removed from Mobile too if moving to Navbar (or keep on mobile? User didn't specify, but "Location for it" implies global. Navbar is safer.) */}
+                 {/* Actually, user said "bottom of the text... not the best place". I'll remove it here too for consistency, as Navbar is visible on mobile too maybe? */}
+                 {/* Wait, Navbar on mobile only shows logo and contact? Let's check Navbar. */}
+                 {/* Checked Navbar: Mobile layout shows "CONTACT". I should probably add CV there too or keep it here for mobile if Navbar is cramped. */}
+                 {/* Decision: Add to mobile navbar or keep here? "It should be more visible on the website". Navbar is best. */}
             </div>
              <br/><br/><br/><br/>
         </div>

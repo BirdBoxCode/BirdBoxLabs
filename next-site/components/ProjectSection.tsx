@@ -62,7 +62,7 @@ const projects: Project[] = [
 
   {
     id: "beatemhub",
-    name: "BEAT EMM HUB",
+    name: "BEAT EM HUB",
     url: "https://beatemhub.com/",
     category: "web",
     images: [
@@ -97,31 +97,31 @@ const projects: Project[] = [
   },
   {
     id: "hameln2pitch",
-    name: "HAMELN EMPLOYEE DECK", // Was "PITCH DECK" or "OTHER DESIGN" in HTML text, ID pitch-btn
+    name: "HEALTHCARE EMPLOYEE DECK", // Was "PITCH DECK" or "OTHER DESIGN" in HTML text, ID pitch-btn
     url: "https://www.behance.net/birdboxcode",
     category: "pitch",
     images: [
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1765449719/BirdBox%20Code/NOHETO%21/hameln%20Employees/Group_725_ccgpmb.png",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1765449721/BirdBox%20Code/NOHETO%21/hameln%20Employees/Group_726_uucxnf.png",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1765449722/BirdBox%20Code/NOHETO%21/hameln%20Employees/Group_727_k5b56g.png",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1765449724/BirdBox%20Code/NOHETO%21/hameln%20Employees/Group_731_ledtxg.png",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1765449726/BirdBox%20Code/NOHETO%21/hameln%20Employees/Group_730_akrmyc.png",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1765449747/BirdBox%20Code/NOHETO%21/hameln%20Employees/Group_728_ehs3kw.png",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1765449749/BirdBox%20Code/NOHETO%21/hameln%20Employees/Group_729_g7afsz.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765806100/BirdBox%20Code/NOHETO%21/hameln%20Employees/Group_732_lezhk8.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765806100/BirdBox%20Code/NOHETO%21/hameln%20Employees/Group_726_jdprgv.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765806099/BirdBox%20Code/NOHETO%21/hameln%20Employees/Group_731_n3iwon.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765806100/BirdBox%20Code/NOHETO%21/hameln%20Employees/Group_730_dglmcb.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765806101/BirdBox%20Code/NOHETO%21/hameln%20Employees/Group_728_skp24p.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765806102/BirdBox%20Code/NOHETO%21/hameln%20Employees/Group_729_pedc7v.png",
     ],
   },
   {
     id: "hameln1-pitch",
-    name: "HAMELN STRATEGY DECK", // Was "PITCH DECK" or "OTHER DESIGN" in HTML text, ID pitch-btn
+    name: "HEALTHCARE STRATEGY DECK", // Was "PITCH DECK" or "OTHER DESIGN" in HTML text, ID pitch-btn
     url: "https://www.behance.net/birdboxcode",
     category: "pitch",
     images: [
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1765449527/BirdBox%20Code/NOHETO%21/hameln%20Board/6c925f240121849.69380c4dbc29e_ys4lue.webp",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1765449528/BirdBox%20Code/NOHETO%21/hameln%20Board/4f515b240121849.69380c4dbe282_wagvjz.webp",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1765449533/BirdBox%20Code/NOHETO%21/hameln%20Board/e3fa2a240121849.69380c4dbd002_r3tetj.png",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1765449529/BirdBox%20Code/NOHETO%21/hameln%20Board/7d0db3240121849.69380c4dbd4a6_tjgwrh.webp",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1765449532/BirdBox%20Code/NOHETO%21/hameln%20Board/a65441240121849.69380c4dbca60_xvrulq.webp",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1765449530/BirdBox%20Code/NOHETO%21/hameln%20Board/135100240121849.69380c4dbda6a_n8squ9.webp",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765806075/BirdBox%20Code/NOHETO%21/hameln%20Board/1_gwlm8n.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765806076/BirdBox%20Code/NOHETO%21/hameln%20Board/2_lvrxvn.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765806075/BirdBox%20Code/NOHETO%21/hameln%20Board/3_freeim.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765806075/BirdBox%20Code/NOHETO%21/hameln%20Board/4_ctbazy.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765806075/BirdBox%20Code/NOHETO%21/hameln%20Board/Group_714_vv6yeb.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765806076/BirdBox%20Code/NOHETO%21/hameln%20Board/5_yfac7e.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765806076/BirdBox%20Code/NOHETO%21/hameln%20Board/Group_736_aepjpv.png",
     ],
   },
   {
@@ -272,17 +272,29 @@ export default function ProjectSection() {
         <div className="preview-section md:col-span-2 overflow-y-scroll h-[80vh] no-scrollbar ml-4" ref={previewRef}>
           <div className="preview-header transition-opacity duration-100 sticky top-0 bg-[#0D0E11] z-10 flex justify-between items-center pb-4" ref={previewHeaderRef}>
             <h2 className="font-jura text-[1vw] text-[#d9d9d9] text-glow-gray my-4">PROJECT PREVIEW</h2>
-            {currentProjectData && (
-              <button className="btn-contact w-[10vw] h-[5vh] bg-transparent border-none cursor-pointer">
-                 <a 
-                   href={currentProjectData.url} 
-                   target="_blank" 
-                   className="text-[#fd36d4] text-glow-pink text-[1vw] no-underline hover:text-[#09FFD8] hover:text-glow-cyan transition-all duration-300"
-                 >
-                   VIEW SITE
-                 </a>
-              </button>
-            )}
+            <div className="flex gap-2">
+                 <button className="btn-contact hidden md:flex px-4 py-1 rounded-full bg-[#2a2a2a] border border-[#9D9D9D] cursor-pointer text-center items-center justify-center transition-all duration-300 group">
+                   <a
+                      className="font-jura text-[0.8vw] text-[#d9d9d9] no-underline group-hover:text-[#fd36d4] transition-all duration-300"
+                      href="https://drive.google.com/file/d/1QWTjVdoovBST_zC-85nUxjKhQ3FDrFji/view?usp=sharing"
+                      target="_blank"
+                   >
+                     CV
+                   </a>
+                 </button>
+                {currentProjectData && (
+                  <button className="btn-contact px-4 py-1 rounded-full bg-[#2a2a2a] border border-[#9D9D9D] cursor-pointer text-center flex items-center justify-center transition-all duration-300 group">
+                     <a 
+                       href={currentProjectData.url} 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       className="font-jura text-[0.8vw] text-[#d9d9d9] no-underline group-hover:text-[#fd36d4] transition-all duration-300"
+                     >
+                       VIEW SITE
+                     </a>
+                  </button>
+                )}
+            </div>
           </div>
 
           <div>
