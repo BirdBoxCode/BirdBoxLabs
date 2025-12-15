@@ -149,7 +149,7 @@ const projects: Project[] = [
 
 export default function ProjectSection() {
   const [activeCategory, setActiveCategory] = useState<ProjectCategory>("web");
-  const [activeProject, setActiveProject] = useState<string>("nerdadvisor");
+  const [activeProject, setActiveProject] = useState<string>("gamesground");
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
 
   const projectsRef = useRef<HTMLDivElement>(null);
