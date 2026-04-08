@@ -20,11 +20,21 @@ const projects: Project[] = [
     url: "https://gamesground.de/",
     category: "web",
     images: [
-            "https://res.cloudinary.com/depkh8amy/image/upload/v1765446872/BirdBox%20Code/Games%20Ground/Games_Ground_jiaxke.png",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1765446874/BirdBox%20Code/Games%20Ground/Games_Ground_2_gterqn.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1775660706/BirdBox%20Code/Games%20Ground/Games_Ground_bktfpx.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1775660704/BirdBox%20Code/Games%20Ground/Games_Ground_3_xmu34d.png",
       "https://res.cloudinary.com/depkh8amy/image/upload/v1749074643/BirdBox%20Code/Screenshot_2025-06-05_at_00.01.53_vehrbv.png",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1749074641/BirdBox%20Code/Games%20Ground/Screenshot_2025-06-05_at_00.03.42_w1oufc.png",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1749074641/BirdBox%20Code/Games%20Ground/Screenshot_2025-06-05_at_00.03.23_jeb8gz.png",
+    ],
+  },
+  {
+    id: "kinogames",
+    name: "KINO GAMES",
+    url: "https://www.kinogames.eu",
+    category: "web",
+    images: [
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1775661272/BirdBox%20Code/Kino-Games/1_njjbd4.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1775661281/BirdBox%20Code/Kino-Games/2_fgs0zy.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1775661275/BirdBox%20Code/Kino-Games/4_ebsos6.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1775661279/BirdBox%20Code/Kino-Games/5_c60rs6.png",
     ],
   },
     {
