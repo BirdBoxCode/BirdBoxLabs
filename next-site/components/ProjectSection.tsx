@@ -286,7 +286,7 @@ export default function ProjectSection() {
                  <button className="btn-contact hidden md:flex px-4 py-1 rounded-full bg-[#2a2a2a] border border-[#9D9D9D] cursor-pointer text-center items-center justify-center transition-all duration-300 group">
                    <a
                       className="font-jura text-[0.8vw] text-[#d9d9d9] no-underline group-hover:text-[#fd36d4] transition-all duration-300"
-                      href="https://drive.google.com/file/d/1QWTjVdoovBST_zC-85nUxjKhQ3FDrFji/view?usp=sharing"
+                      href="https://drive.google.com/file/d/1HIt5OOZioMAZT7CY-y3djO8mAZhHhEMT/view?usp=sharing"
                       target="_blank"
                    >
                      CV

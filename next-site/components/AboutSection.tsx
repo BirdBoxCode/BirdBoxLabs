@@ -46,7 +46,7 @@ export default function AboutSection() {
                         I design and build digital experiences that balance visual creativity with a solid technical foundation. Whether I'm working with a React-based stack or a customized CMS, I focus on performance, brand expression, maintainable code.
                     </p>
                     <p className="font-jura font-light text-[#FFFBF8] text-[1vw] mb-[1em]">
-                        Full breakdown of tools and experience? Check my CV.
+                        Full breakdown of tools and experience? <a href="https://drive.google.com/file/d/1HIt5OOZioMAZT7CY-y3djO8mAZhHhEMT/view?usp=sharing" target="_blank" className="text-[#fd36d4] hover:text-[#09FFD8] transition-colors duration-200">Check my CV</a>.
                     </p>
                     
                     {/* CV Button moved to Navbar */}
@@ -90,7 +90,7 @@ export default function AboutSection() {
                     I design and build digital experiences that balance visual creativity with a solid technical foundation. Whether I'm working with a React-based stack or a customized CMS, I focus on performance, brand expression, maintainable code.
                  </p>
                  <p className="font-jura font-light text-[#FFFBF8] text-[1em] text-center mb-[1em]">
-                    Full breakdown of tools and experience? Check my CV.
+                    Full breakdown of tools and experience? <a href="https://drive.google.com/file/d/1HIt5OOZioMAZT7CY-y3djO8mAZhHhEMT/view?usp=sharing" target="_blank" className="text-[#fd36d4] hover:text-[#09FFD8] transition-colors duration-200">Check my CV</a>.
                  </p>
             </div>
              <br/><br/><br/><br/>
