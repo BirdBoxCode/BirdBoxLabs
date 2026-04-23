@@ -61,6 +61,42 @@ h2 {
   }
 }
 
+/* CRT / TV Screen Effect */
+@keyframes crt-flicker {
+  0%, 94%, 100% { opacity: 1; }
+  95% { opacity: 0.97; }
+  96% { opacity: 1; }
+  97% { opacity: 0.95; }
+  98% { opacity: 1; }
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 3px,
+    rgba(0, 0, 0, 0.09) 3px,
+    rgba(0, 0, 0, 0.09) 4px
+  );
+  pointer-events: none;
+  z-index: 9998;
+  animation: crt-flicker 5s infinite;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, transparent 45%, rgba(0, 0, 0, 0.82) 100%),
+    linear-gradient(155deg, rgba(255, 255, 255, 0.045) 0%, transparent 45%);
+  pointer-events: none;
+  z-index: 9997;
+}
+
 /* Hide scrollbar for clean internal scrolling */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
