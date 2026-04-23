@@ -18,8 +18,8 @@ type Project = {
 const projects: Project[] = [
   {
     id: "ninaro",
-    name: "NINARO",
-    url: "",
+    name: "NINARO - Coming soon",
+    url: "https://nina-g3i4.onrender.com/",
     category: "web",
     comingSoon: true,
     description: "A bespoke digital experience crafted for a visionary artist and tattooist. Moving beyond traditional layouts, Ninaro features a uniquely structured design language built to translate a specific creative vision into a fluid, interactive reality.",
@@ -244,14 +244,14 @@ export default function ProjectSection() {
                    key={cat}
                    onClick={() => handleCategoryChange(cat as ProjectCategory)}
                    className={`relative px-3 py-1 rounded-full font-jura text-[0.8vw] transition-colors duration-200 z-10 ${
-                     activeCategory === cat ? "text-[#0D0E11]" : "text-[#d9d9d9] hover:text-[#fd36d4]"
+                     activeCategory === cat ? "text-[#0D0E11]" : "text-[#d9d9d9] hover:text-[#bf5fff]"
                    }`}
                  >
                    {cat === "web" ? "Websites" : "Pitch decks"}
                    {activeCategory === cat && (
                      <motion.div
                        layoutId="active-pill-desktop"
-                       className="absolute inset-0 bg-[#fd36d4] rounded-full -z-10"
+                       className="absolute inset-0 bg-[#bf5fff] rounded-full -z-10"
                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
                      />
                    )}
@@ -278,8 +278,8 @@ export default function ProjectSection() {
                     transition={{ type: "spring", stiffness: 400, damping: 20 }}
                     className={`w-full text-left py-2 px-0 bg-transparent border-none cursor-pointer font-jura text-[1vw] transition-colors duration-200
                       ${activeProject === proj.id 
-                        ? "text-[#fd36d4] text-glow-pink" 
-                        : "text-[#d9d9d9] hover:text-[#fd36d4] hover:text-glow-pink"
+                        ? "text-[#bf5fff] text-glow-purple" 
+                        : "text-[#d9d9d9] hover:text-[#bf5fff] hover:text-glow-purple"
                       }`}
                   >
                     {proj.name}
@@ -319,7 +319,7 @@ export default function ProjectSection() {
             <div className="flex gap-2">
                  <button className="btn-contact hidden md:flex px-4 py-1 rounded-full bg-[#2a2a2a] border border-[#9D9D9D] cursor-pointer text-center items-center justify-center transition-all duration-300 group">
                    <a
-                      className="font-jura text-[0.8vw] text-[#d9d9d9] no-underline group-hover:text-[#fd36d4] transition-all duration-300"
+                      className="font-jura text-[0.8vw] text-[#d9d9d9] no-underline group-hover:text-[#bf5fff] transition-all duration-300"
                       href="https://drive.google.com/file/d/1HIt5OOZioMAZT7CY-y3djO8mAZhHhEMT/view?usp=sharing"
                       target="_blank"
                    >
@@ -327,20 +327,20 @@ export default function ProjectSection() {
                    </a>
                  </button>
                 {currentProjectData && (
-                  currentProjectData.comingSoon ? (
-                    <button className="btn-contact px-4 py-1 rounded-full bg-[#2a2a2a] border border-[#9D9D9D] text-center flex items-center justify-center opacity-50 cursor-default">
-                      <span className="font-jura text-[0.8vw] text-[#d9d9d9]">COMING SOON</span>
-                    </button>
-                  ) : (
+                  currentProjectData.url ? (
                     <button className="btn-contact px-4 py-1 rounded-full bg-[#2a2a2a] border border-[#9D9D9D] cursor-pointer text-center flex items-center justify-center transition-all duration-300 group">
                        <a
                          href={currentProjectData.url}
                          target="_blank"
                          rel="noopener noreferrer"
-                         className="font-jura text-[0.8vw] text-[#d9d9d9] no-underline group-hover:text-[#fd36d4] transition-all duration-300"
+                         className="font-jura text-[0.8vw] text-[#d9d9d9] no-underline group-hover:text-[#bf5fff] transition-all duration-300"
                        >
                          VIEW SITE
                        </a>
+                    </button>
+                  ) : (
+                    <button className="btn-contact px-4 py-1 rounded-full bg-[#2a2a2a] border border-[#9D9D9D] text-center flex items-center justify-center opacity-50 cursor-default">
+                      <span className="font-jura text-[0.8vw] text-[#d9d9d9]">COMING SOON</span>
                     </button>
                   )
                 )}
@@ -392,7 +392,7 @@ export default function ProjectSection() {
                   {activeCategory === cat && (
                     <motion.div
                       layoutId="active-pill-mobile"
-                      className="absolute inset-0 bg-[#fd36d4] rounded-full -z-10"
+                      className="absolute inset-0 bg-[#bf5fff] rounded-full -z-10"
                       transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     />
                   )}
@@ -410,7 +410,7 @@ export default function ProjectSection() {
                   onClick={() => toggleMobile(proj.id)}
                   className={`w-full py-4 text-center bg-transparent border-none cursor-pointer font-jura text-[5vw] transition-colors duration-100
                     ${mobileExpanded === proj.id 
-                       ? "text-[#fd36d4] text-glow-pink" 
+                       ? "text-[#bf5fff] text-glow-purple" 
                        : "text-[#FFFBF8]"
                     }`}
                >
@@ -428,12 +428,12 @@ export default function ProjectSection() {
                   )}
 
                   <div className="mob-preview-header sticky top-0 flex justify-end w-full my-2">
-                     {proj.comingSoon ? (
-                       <span className="font-jura text-[3vw] text-[#9D9D9D] opacity-60">COMING SOON</span>
-                     ) : (
+                     {proj.url ? (
                        <button className="mob-view-btn w-[20vw] h-[2.5vh] rounded-[10px] bg-transparent border-none">
-                         <a href={proj.url} target="_blank" className="font-jura text-[3vw] text-[#fd36d4] text-glow-pink no-underline hover:text-[#09FFD8] hover:text-shadow-[0_0_12px_#09FFD8] transition-all duration-200">VIEW SITE</a>
+                         <a href={proj.url} target="_blank" className="font-jura text-[3vw] text-[#bf5fff] text-glow-purple no-underline hover:text-[#09FFD8] hover:text-shadow-[0_0_12px_#09FFD8] transition-all duration-200">VIEW SITE</a>
                        </button>
+                     ) : (
+                       <span className="font-jura text-[3vw] text-[#9D9D9D] opacity-60">COMING SOON</span>
                      )}
                   </div>
                   {proj.comingSoon ? (

@@ -20,7 +20,7 @@ export default function Navbar() {
                {/* Mobile CV Button */}
                <button className="btn-contact md:hidden px-4 py-1 rounded-full bg-[#2a2a2a] border border-[#9D9D9D] cursor-pointer text-center flex items-center justify-center transition-all duration-300 group">
                  <a
-                    className="font-jura text-[3vw] text-[#d9d9d9] no-underline group-hover:text-[#fd36d4] transition-all duration-300"
+                    className="font-jura text-[3vw] text-[#d9d9d9] no-underline group-hover:text-[#bf5fff] transition-all duration-300"
                     href="https://drive.google.com/file/d/1HIt5OOZioMAZT7CY-y3djO8mAZhHhEMT/view?usp=sharing"
                     target="_blank"
                  >
@@ -30,7 +30,7 @@ export default function Navbar() {
 
                <button className="btn-contact px-4 py-1 rounded-full bg-[#2a2a2a] border border-[#9D9D9D] cursor-pointer text-center flex items-center justify-center transition-all duration-300 group">
                 <a
-                  className="pink-link font-jura text-[3vw] md:text-[0.8vw] text-[#d9d9d9] no-underline group-hover:text-[#fd36d4] transition-all duration-300"
+                  className="pink-link font-jura text-[3vw] md:text-[0.8vw] text-[#d9d9d9] no-underline group-hover:text-[#bf5fff] transition-all duration-300"
                   href="mailto:chris@birdboxlabs.com"
                 >
                   CONTACT
