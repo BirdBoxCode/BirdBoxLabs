@@ -351,7 +351,7 @@ export default function ProjectSection() {
              {currentProjectData?.comingSoon ? (
                <div className="relative w-full border border-[#9D9D9D] rounded-[10px] overflow-hidden aspect-video">
                  <iframe
-                   src="https://customer-ui5gikvnytrm15ts.cloudflarestream.com/8912c980eeed4c5e9dab3bacfd494557/iframe"
+                   src="https://customer-ui5gikvnytrm15ts.cloudflarestream.com/4b6ec728448c0d71dc34bb9350ee5e73/watch"
                    className="absolute top-0 left-0 w-full h-full"
                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
                    allowFullScreen
@@ -439,7 +439,7 @@ export default function ProjectSection() {
                   {proj.comingSoon ? (
                     <div className="relative w-full border border-[#9D9D9D] rounded-[10px] overflow-hidden aspect-video mb-4">
                       <iframe
-                        src="https://customer-ui5gikvnytrm15ts.cloudflarestream.com/8912c980eeed4c5e9dab3bacfd494557/iframe"
+                        src="https://customer-ui5gikvnytrm15ts.cloudflarestream.com/4b6ec728448c0d71dc34bb9350ee5e73/watch"
                         className="absolute top-0 left-0 w-full h-full"
                         allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
                         allowFullScreen
