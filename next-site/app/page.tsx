@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import ProjectSection from "@/components/ProjectSection";
 import StaticNoise from "@/components/StaticNoise";
 import Footer from "@/components/Footer";
+import TiltTitle from "@/components/TiltTitle";
 
 export default function Home() {
   return (
@@ -15,8 +16,8 @@ export default function Home() {
           <div className="w-full">
             <Navbar />
             <section className="header mx-4 md:mx-8"> 
-                <div className="header-container border-y border-[#9D9D9D] py-2 md:py-0 text-center">
-                    <h1 className="font-jura text-[10vw] md:text-[11.7vw] text-[#FFFBF8] text-glow-white tracking-[0.62vw]">BIRDBOX LABS</h1>
+                <div className="header-container border-y border-[#9D9D9D] py-2 md:py-0 text-center" style={{ perspective: "900px" }}>
+                    <TiltTitle />
                 </div>
             </section>
           </div>

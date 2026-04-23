@@ -34,6 +34,7 @@ export default function AboutSection() {
 
                     <h2 className="font-jura text-[1vw] text-[#d9d9d9] text-glow-gray my-4 uppercase">Selected Work</h2>
                     <ul className="font-jura font-light text-[#FFFBF8] text-[1vw] mb-4 list-disc list-outside ml-4">
+                        <li className="mb-2"><strong>Ninaro</strong> <span className="text-[#fd36d4]">(Coming Soon)</span> — A bespoke digital experience crafted for a visionary artist and tattooist. Moving beyond traditional layouts, Ninaro features a uniquely structured design language built to translate a specific creative vision into a fluid, interactive reality.</li>
                         <li className="mb-2"><strong>Kino Games</strong> — Built an immersive Next.js and Sanity CMS experience that breaks traditional UX conventions to deliver a cinematic, narrative-driven journey. Developed a custom CI/CD pipeline and integrated Notion APIs to streamline studio operations and inbound inquiries.</li>
                         <li className="mb-2"><strong>Games Ground</strong> — Co-developed a large-scale Webflow ecosystem, with custom JavaScript components and relational CMS architectures to handle dynamic festival data.</li>
                         <li className="mb-2"><strong>Vriendjes</strong> — designing and building a full Webflow experience with a complex booking system, custom JavaScript interactions, and playful motion.</li>
@@ -78,6 +79,7 @@ export default function AboutSection() {
 
                  <h2 className="font-jura text-[5vw] text-[#d9d9d9] text-glow-gray my-4 text-center uppercase">Selected Work</h2>
                  <ul className="font-jura font-light text-[#FFFBF8] text-[1em] text-left mb-4 list-disc list-outside ml-6 inline-block">
+                    <li className="mb-2"><strong>Ninaro</strong> <span className="text-[#fd36d4]">(Coming Soon)</span> — A bespoke digital experience crafted for a visionary artist and tattooist. Moving beyond traditional layouts, Ninaro features a uniquely structured design language built to translate a specific creative vision into a fluid, interactive reality.</li>
                     <li className="mb-2"><strong>Kino Games</strong> — Built an immersive Next.js and Sanity CMS experience that breaks traditional UX conventions to deliver a cinematic, narrative-driven journey. Developed a custom CI/CD pipeline and integrated Notion APIs to streamline studio operations and inbound inquiries.</li>
                     <li className="mb-2"><strong>Games Ground</strong> — Co-developed a large-scale Webflow ecosystem, with custom JavaScript components and relational CMS architectures to handle dynamic festival data.</li>
                     <li className="mb-2"><strong>Vriendjes</strong> — designing and building a full Webflow experience with a complex booking system, custom JavaScript interactions, and playful motion.</li>

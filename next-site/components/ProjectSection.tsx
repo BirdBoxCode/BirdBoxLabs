@@ -11,25 +11,26 @@ type Project = {
   url: string;
   category: ProjectCategory;
   images: string[];
+  description?: string;
+  comingSoon?: boolean;
 };
 
 const projects: Project[] = [
-    {
-    id: "gamesground",
-    name: "GAMES GROUND",
-    url: "https://gamesground.de/",
-    category: "web",
-    images: [
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1775660706/BirdBox%20Code/Games%20Ground/Games_Ground_bktfpx.png",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1775660704/BirdBox%20Code/Games%20Ground/Games_Ground_3_xmu34d.png",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1749074643/BirdBox%20Code/Screenshot_2025-06-05_at_00.01.53_vehrbv.png",
-    ],
-  },
   {
+    id: "ninaro",
+    name: "NINARO",
+    url: "",
+    category: "web",
+    comingSoon: true,
+    description: "A bespoke digital experience crafted for a visionary artist and tattooist. Moving beyond traditional layouts, Ninaro features a uniquely structured design language built to translate a specific creative vision into a fluid, interactive reality.",
+    images: [],
+  },
+    {
     id: "kinogames",
     name: "KINO GAMES",
     url: "https://www.kinogames.eu",
     category: "web",
+    description: "Built an immersive Next.js and Sanity CMS experience that breaks traditional UX conventions to deliver a cinematic, narrative-driven journey. Developed a custom CI/CD pipeline and integrated Notion APIs to streamline studio operations and inbound inquiries.",
     images: [
       "https://res.cloudinary.com/depkh8amy/image/upload/v1775661272/BirdBox%20Code/Kino-Games/1_njjbd4.png",
       "https://res.cloudinary.com/depkh8amy/image/upload/v1775661281/BirdBox%20Code/Kino-Games/2_fgs0zy.png",
@@ -37,11 +38,35 @@ const projects: Project[] = [
       "https://res.cloudinary.com/depkh8amy/image/upload/v1775661279/BirdBox%20Code/Kino-Games/5_c60rs6.png",
     ],
   },
+  {
+    id: "gamesground",
+    name: "GAMES GROUND",
+    url: "https://gamesground.de/",
+    category: "web",
+    description: "Co-developed a large-scale Webflow ecosystem, with custom JavaScript components and relational CMS architectures to handle dynamic festival data.",
+    images: [
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1775660706/BirdBox%20Code/Games%20Ground/Games_Ground_bktfpx.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1775660704/BirdBox%20Code/Games%20Ground/Games_Ground_3_xmu34d.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1749074643/BirdBox%20Code/Screenshot_2025-06-05_at_00.01.53_vehrbv.png",
+    ],
+  },
+  {
+    id: "vriendjes",
+    name: "VRIENDJES",
+    url: "http://www.vriendjes.nl",
+    category: "web",
+    description: "Designing and building a full Webflow experience with a complex booking system, custom JavaScript interactions, and playful motion.",
+    images: [
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765446535/BirdBox%20Code/Vriendjes/Vriendjes_pn7j8w.png",
+      "https://res.cloudinary.com/depkh8amy/image/upload/v1765446534/BirdBox%20Code/Vriendjes/Vriendjes2_ljy6xm.png",
+    ],
+  },
     {
     id: "noheto",
     name: "NOHETO!",
     url: "http://www.noheto.de/",
     category: "web",
+    description: "Delivering a crisp, multilingual website for a pharmaceutical consultancy with thoughtful layout animation and content refinement.",
     images: [
       "https://res.cloudinary.com/depkh8amy/image/upload/v1765404227/BirdBox%20Code/NOHETO%21/Noheto2_lnz78l.png",
       "https://res.cloudinary.com/depkh8amy/image/upload/v1765404373/BirdBox%20Code/NOHETO%21/Noheto_lfneto.png",
@@ -53,20 +78,11 @@ const projects: Project[] = [
     name: "NERDADVISOR",
     url: "https://www.figma.com/design/Jxipdu1kwiuZNPZGGXIkys/NerdAdvisor?node-id=1932-568&t=wUn9a32zc66mKfo9-1",
     category: "web",
+    description: "Steering front-end development and UI/UX product direction for a gaming-career platform, focusing on scalable component libraries and user retention loops.",
     images: [
       "https://res.cloudinary.com/depkh8amy/image/upload/v1765446706/BirdBox%20Code/NerdAdvisor/NA1_fvj5rz.png",
       "https://res.cloudinary.com/depkh8amy/image/upload/v1765446708/BirdBox%20Code/NerdAdvisor/NA2_k4j056.png",
       "https://res.cloudinary.com/depkh8amy/image/upload/v1765446706/BirdBox%20Code/NerdAdvisor/NA3_mbb4zb.png",
-    ],
-  },
-  {
-    id: "vriendjes",
-    name: "VRIENDJES",
-    url: "http://www.vriendjes.nl",
-    category: "web",
-    images: [
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1765446535/BirdBox%20Code/Vriendjes/Vriendjes_pn7j8w.png",
-      "https://res.cloudinary.com/depkh8amy/image/upload/v1765446534/BirdBox%20Code/Vriendjes/Vriendjes2_ljy6xm.png",
     ],
   },
 
@@ -159,7 +175,7 @@ const projects: Project[] = [
 
 export default function ProjectSection() {
   const [activeCategory, setActiveCategory] = useState<ProjectCategory>("web");
-  const [activeProject, setActiveProject] = useState<string>("gamesground");
+  const [activeProject, setActiveProject] = useState<string>("ninaro");
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
 
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -257,7 +273,7 @@ export default function ProjectSection() {
               >
                   <div className="separator w-full flex items-center border-t border-[#9D9D9D] my-2"></div>
                   <motion.button 
-                    onClick={() => setActiveProject(proj.id)}
+                    onClick={() => setActiveProject(activeProject === proj.id ? "" : proj.id)}
                     whileHover={{ x: 10 }}
                     transition={{ type: "spring", stiffness: 400, damping: 20 }}
                     className={`w-full text-left py-2 px-0 bg-transparent border-none cursor-pointer font-jura text-[1vw] transition-colors duration-200
@@ -268,6 +284,24 @@ export default function ProjectSection() {
                   >
                     {proj.name}
                   </motion.button>
+                  
+                  {/* Expanded Description for Desktop */}
+                  <AnimatePresence>
+                    {activeProject === proj.id && proj.description && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                      >
+                        <p className="font-jura font-light text-[#FFFBF8] text-[0.8vw] pb-4 pr-4 leading-relaxed">
+                          {proj.description}
+                        </p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+
                   {/* Add spacer at the end if it's the last item to match original layout breathing room */}
                   {idx === filteredProjects.length - 1 && (
                       <p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
@@ -293,29 +327,46 @@ export default function ProjectSection() {
                    </a>
                  </button>
                 {currentProjectData && (
-                  <button className="btn-contact px-4 py-1 rounded-full bg-[#2a2a2a] border border-[#9D9D9D] cursor-pointer text-center flex items-center justify-center transition-all duration-300 group">
-                     <a 
-                       href={currentProjectData.url} 
-                       target="_blank" 
-                       rel="noopener noreferrer"
-                       className="font-jura text-[0.8vw] text-[#d9d9d9] no-underline group-hover:text-[#fd36d4] transition-all duration-300"
-                     >
-                       VIEW SITE
-                     </a>
-                  </button>
+                  currentProjectData.comingSoon ? (
+                    <button className="btn-contact px-4 py-1 rounded-full bg-[#2a2a2a] border border-[#9D9D9D] text-center flex items-center justify-center opacity-50 cursor-default">
+                      <span className="font-jura text-[0.8vw] text-[#d9d9d9]">COMING SOON</span>
+                    </button>
+                  ) : (
+                    <button className="btn-contact px-4 py-1 rounded-full bg-[#2a2a2a] border border-[#9D9D9D] cursor-pointer text-center flex items-center justify-center transition-all duration-300 group">
+                       <a
+                         href={currentProjectData.url}
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         className="font-jura text-[0.8vw] text-[#d9d9d9] no-underline group-hover:text-[#fd36d4] transition-all duration-300"
+                       >
+                         VIEW SITE
+                       </a>
+                    </button>
+                  )
                 )}
             </div>
           </div>
 
           <div>
-             {currentProjectData?.images.map((imgSrc, i) => (
-                <img 
-                  key={i} 
-                  className="w-full rounded-[10px] mb-4" 
-                  src={imgSrc} 
-                  alt={`${currentProjectData.name} preview ${i+1}`} 
-                />
-             ))}
+             {currentProjectData?.comingSoon ? (
+               <div className="relative w-full border border-[#9D9D9D] rounded-[10px] overflow-hidden aspect-video">
+                 <iframe
+                   src="https://customer-ui5gikvnytrm15ts.cloudflarestream.com/8912c980eeed4c5e9dab3bacfd494557/iframe"
+                   className="absolute top-0 left-0 w-full h-full"
+                   allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                   allowFullScreen
+                 />
+               </div>
+             ) : (
+               currentProjectData?.images.map((imgSrc, i) => (
+                 <img
+                   key={i}
+                   className="w-full rounded-[10px] mb-4"
+                   src={imgSrc}
+                   alt={`${currentProjectData.name} preview ${i+1}`}
+                 />
+               ))
+             )}
              {!currentProjectData && <div className="text-[#d9d9d9] font-jura">Select a project to view details</div>}
              <p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
           </div>
@@ -357,7 +408,7 @@ export default function ProjectSection() {
                <div className="separator w-full border-t border-[#9D9D9D] my-2"></div>
                <button 
                   onClick={() => toggleMobile(proj.id)}
-                  className={`w-full h-[5vh] text-center bg-transparent border-none cursor-pointer font-jura text-[5vw] transition-colors duration-100
+                  className={`w-full py-4 text-center bg-transparent border-none cursor-pointer font-jura text-[5vw] transition-colors duration-100
                     ${mobileExpanded === proj.id 
                        ? "text-[#fd36d4] text-glow-pink" 
                        : "text-[#FFFBF8]"
@@ -367,21 +418,43 @@ export default function ProjectSection() {
                </button>
                
                <div 
-                 className={`overflow-hidden transition-all duration-500 ease-in-out ${mobileExpanded === proj.id ? 'max-h-[200vh] opacity-100' : 'max-h-0 opacity-0'}`}
+                 className={`overflow-hidden transition-all duration-500 ease-in-out ${mobileExpanded === proj.id ? 'max-h-[500vh] opacity-100' : 'max-h-0 opacity-0'}`}
                >
+                  {/* Description for Mobile */}
+                  {proj.description && (
+                    <p className="font-jura font-light text-[#FFFBF8] text-[0.9em] text-center mb-6 leading-relaxed px-4">
+                      {proj.description}
+                    </p>
+                  )}
+
                   <div className="mob-preview-header sticky top-0 flex justify-end w-full my-2">
-                     <button className="mob-view-btn w-[20vw] h-[2.5vh] rounded-[10px] bg-transparent border-none">
-                        <a href={proj.url} target="_blank" className="font-jura text-[3vw] text-[#fd36d4] text-glow-pink no-underline hover:text-[#09FFD8] hover:text-shadow-[0_0_12px_#09FFD8] transition-all duration-200">VIEW SITE</a>
-                     </button>
+                     {proj.comingSoon ? (
+                       <span className="font-jura text-[3vw] text-[#9D9D9D] opacity-60">COMING SOON</span>
+                     ) : (
+                       <button className="mob-view-btn w-[20vw] h-[2.5vh] rounded-[10px] bg-transparent border-none">
+                         <a href={proj.url} target="_blank" className="font-jura text-[3vw] text-[#fd36d4] text-glow-pink no-underline hover:text-[#09FFD8] hover:text-shadow-[0_0_12px_#09FFD8] transition-all duration-200">VIEW SITE</a>
+                       </button>
+                     )}
                   </div>
-                  {proj.images.map((imgSrc, i) => (
-                     <img 
-                       key={i} 
-                       className="w-full rounded-[10px] mb-4" 
-                       src={imgSrc} 
-                       alt={`${proj.name} mobile preview ${i+1}`} 
-                     />
-                  ))}
+                  {proj.comingSoon ? (
+                    <div className="relative w-full border border-[#9D9D9D] rounded-[10px] overflow-hidden aspect-video mb-4">
+                      <iframe
+                        src="https://customer-ui5gikvnytrm15ts.cloudflarestream.com/8912c980eeed4c5e9dab3bacfd494557/iframe"
+                        className="absolute top-0 left-0 w-full h-full"
+                        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                        allowFullScreen
+                      />
+                    </div>
+                  ) : (
+                    proj.images.map((imgSrc, i) => (
+                      <img
+                        key={i}
+                        className="w-full rounded-[10px] mb-4"
+                        src={imgSrc}
+                        alt={`${proj.name} mobile preview ${i+1}`}
+                      />
+                    ))
+                  )}
                </div>
             </div>
          ))}
