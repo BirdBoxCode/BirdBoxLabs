@@ -1,28 +1,39 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function CursorFollower() {
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
-  
-  // Spring config for smooth "laggy" follow effect
-  const springConfig = { damping: 25, stiffness: 150 }; // Adjustable feel
+
+  const springConfig = { damping: 25, stiffness: 150 };
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
-  
+
   const [isVisible, setIsVisible] = useState(false);
+  // Ref tracks visibility without triggering effect re-runs
+  const isVisibleRef = useRef(false);
 
   useEffect(() => {
     const moveCursor = (e: MouseEvent) => {
-      cursorX.set(e.clientX - 16); // Center the 32px circle
+      cursorX.set(e.clientX - 16);
       cursorY.set(e.clientY - 16);
-      if (!isVisible) setIsVisible(true);
+      if (!isVisibleRef.current) {
+        isVisibleRef.current = true;
+        setIsVisible(true);
+      }
     };
 
-    const handleMouseEnter = () => setIsVisible(true);
-    const handleMouseLeave = () => setIsVisible(false);
+    const handleMouseEnter = () => {
+      isVisibleRef.current = true;
+      setIsVisible(true);
+    };
+
+    const handleMouseLeave = () => {
+      isVisibleRef.current = false;
+      setIsVisible(false);
+    };
 
     window.addEventListener("mousemove", moveCursor);
     window.addEventListener("mouseenter", handleMouseEnter);
@@ -33,7 +44,7 @@ export default function CursorFollower() {
       window.removeEventListener("mouseenter", handleMouseEnter);
       window.removeEventListener("mouseleave", handleMouseLeave);
     };
-  }, [cursorX, cursorY, isVisible]);
+  }, [cursorX, cursorY]);
 
   return (
     <motion.div
@@ -44,12 +55,7 @@ export default function CursorFollower() {
         opacity: isVisible ? 1 : 0,
       }}
     >
-      {/* 
-         The design request is "nice animation... similar to antigravity.google... TV style grain".
-         Antigravity usually has a large soft glow. 
-         Let's create a larger glow area centered on the small follower.
-      */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(253,54,212,0.15)_0%,rgba(9,255,216,0.05)_30%,transparent_70%)] rounded-full" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(191,95,255,0.15)_0%,rgba(9,255,216,0.05)_30%,transparent_70%)] rounded-full" />
     </motion.div>
   );
 }

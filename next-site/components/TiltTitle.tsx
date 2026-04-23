@@ -23,7 +23,7 @@ export default function TiltTitle() {
   return (
     <motion.h1
       style={{ rotateX, rotateY, transformPerspective: 900 }}
-      className="font-jura text-[10vw] md:text-[11.7vw] text-[#FFFBF8] text-glow-white tracking-[0.62vw] will-change-transform"
+      className="font-jura text-[10vw] md:text-[11.7vw] text-[#FFFBF8] text-glow-purple-title tracking-[0.62vw] will-change-transform"
     >
       BIRDBOX LABS
     </motion.h1>

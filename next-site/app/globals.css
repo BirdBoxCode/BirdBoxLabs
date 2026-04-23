@@ -5,7 +5,7 @@
 
   --color-background: #0d0e11;
   --color-foreground: #fffbf8;
-  --color-accent-pink: #fd36d4;
+  --color-accent-purple: #bf5fff;
   --color-accent-cyan: #09ffd8;
   --color-text-secondary: #d9d9d9;
 }
@@ -21,12 +21,38 @@ body {
   text-shadow: 0 0 12px #fffbf8;
 }
 
+@utility text-glow-purple-title {
+  text-shadow:
+    0 0 6px #fffbf8,
+    0 0 18px rgba(191, 95, 255, 0.75),
+    0 0 45px rgba(191, 95, 255, 0.35),
+    0 0 90px rgba(191, 95, 255, 0.12);
+  animation: purple-glow-breathe 5s ease-in-out infinite;
+}
+
+@keyframes purple-glow-breathe {
+  0%, 100% {
+    text-shadow:
+      0 0 6px #fffbf8,
+      0 0 18px rgba(191, 95, 255, 0.75),
+      0 0 45px rgba(191, 95, 255, 0.35),
+      0 0 90px rgba(191, 95, 255, 0.12);
+  }
+  50% {
+    text-shadow:
+      0 0 8px #fffbf8,
+      0 0 24px rgba(191, 95, 255, 0.9),
+      0 0 60px rgba(191, 95, 255, 0.45),
+      0 0 120px rgba(191, 95, 255, 0.18);
+  }
+}
+
 @utility text-glow-gray {
   text-shadow: 0 0 12px #d9d9d937;
 }
 
-@utility text-glow-pink {
-  text-shadow: 0 0 12px #fd36d4;
+@utility text-glow-purple {
+  text-shadow: 0 0 12px #bf5fff;
 }
 
 @utility text-glow-cyan {
@@ -59,6 +85,43 @@ h2 {
     font-size: 5vw;
     text-align: center;
   }
+}
+
+/* CRT / TV Screen Effect */
+@keyframes crt-flicker {
+  0%, 94%, 100% { opacity: 1; }
+  95% { opacity: 0.97; }
+  96% { opacity: 1; }
+  97% { opacity: 0.95; }
+  98% { opacity: 1; }
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 3px,
+    rgba(0, 0, 0, 0.09) 3px,
+    rgba(0, 0, 0, 0.09) 4px
+  );
+  pointer-events: none;
+  z-index: 9998;
+  will-change: opacity;
+  animation: crt-flicker 5s infinite;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, transparent 45%, rgba(0, 0, 0, 0.82) 100%),
+    linear-gradient(155deg, rgba(255, 255, 255, 0.045) 0%, transparent 45%);
+  pointer-events: none;
+  z-index: 9997;
 }
 
 /* Hide scrollbar for clean internal scrolling */
