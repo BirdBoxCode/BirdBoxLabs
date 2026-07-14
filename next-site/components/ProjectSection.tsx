@@ -19,7 +19,7 @@ const projects: Project[] = [
   {
     id: "ninaro",
     name: "NINARO - Coming soon",
-    url: "https://nina-g3i4.onrender.com/",
+    url: "https://ninaro.art",
     category: "web",
     comingSoon: true,
     description: "A bespoke digital experience crafted for a visionary artist and tattooist. Moving beyond traditional layouts, Ninaro features a uniquely structured design language built to translate a specific creative vision into a fluid, interactive reality.",
@@ -320,7 +320,7 @@ export default function ProjectSection() {
                  <button className="btn-contact hidden md:flex px-4 py-1 rounded-full bg-[#2a2a2a] border border-[#9D9D9D] cursor-pointer text-center items-center justify-center transition-all duration-300 group">
                    <a
                       className="font-jura text-[0.8vw] text-[#d9d9d9] no-underline group-hover:text-[#bf5fff] transition-all duration-300"
-                      href="https://drive.google.com/file/d/1HIt5OOZioMAZT7CY-y3djO8mAZhHhEMT/view?usp=sharing"
+                      href="https://drive.google.com/file/d/14dCLQFMNfip-_b9606wKTfTEknQvvtzZ/view?usp=sharing"
                       target="_blank"
                    >
                      CV
@@ -351,7 +351,7 @@ export default function ProjectSection() {
              {currentProjectData?.comingSoon ? (
                <div className="relative w-full border border-[#9D9D9D] rounded-[10px] overflow-hidden aspect-video">
                  <iframe
-                   src="https://customer-ui5gikvnytrm15ts.cloudflarestream.com/4b6ec728448c0d71dc34bb9350ee5e73/watch"
+                   src="https://customer-ui5gikvnytrm15ts.cloudflarestream.com/9544c2246b9fbe3a7a0c73665dbc87a5/iframe?poster=https%3A%2F%2Fcustomer-ui5gikvnytrm15ts.cloudflarestream.com%2F9544c2246b9fbe3a7a0c73665dbc87a5%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
                    className="absolute top-0 left-0 w-full h-full"
                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
                    allowFullScreen
@@ -439,7 +439,7 @@ export default function ProjectSection() {
                   {proj.comingSoon ? (
                     <div className="relative w-full border border-[#9D9D9D] rounded-[10px] overflow-hidden aspect-video mb-4">
                       <iframe
-                        src="https://customer-ui5gikvnytrm15ts.cloudflarestream.com/4b6ec728448c0d71dc34bb9350ee5e73/watch"
+                        src="https://customer-ui5gikvnytrm15ts.cloudflarestream.com/9544c2246b9fbe3a7a0c73665dbc87a5/iframe?poster=https%3A%2F%2Fcustomer-ui5gikvnytrm15ts.cloudflarestream.com%2F9544c2246b9fbe3a7a0c73665dbc87a5%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
                         className="absolute top-0 left-0 w-full h-full"
                         allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
                         allowFullScreen
